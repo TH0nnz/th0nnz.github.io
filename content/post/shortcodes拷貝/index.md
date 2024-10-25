@@ -1,46 +1,57 @@
 ---
-title: TEST POST
+title: Move the blog from Notion to GitHub
 description: Useful shortcodes that can be used in Markdown
-date: 2023-08-25 00:00:00+0000
+date:  2024-10-25 00:00:00+0000
 image: cover.jpg
 categories:
     - TEST Category
 tags:
     - TEST Tag
 ---
+當我Notion寫的Blog數量越來越多，然後稀爛的SEO…
+轉而尋找`可掛SEO、免費、markdown` 的Blog解決方案
 
-For more details, check out the [documentation](https://stack.jimmycai.com/writing/shortcodes).
+**`Hugo`+`gh-page` 是一個開源，且完全符合，又可以調整style的方案**
 
-## Bilibili video
+未來的編輯流程
 
-{{< bilibili "BV1d4411N7zD" >}}
+```mermaid
+graph LR
+Pr[(Prive)] -. move .->Pb[(Publish
+Notion Blog)]
 
-## Tencent video
+Pb-->|Export
+markdown|B(Local folder
+copy/paste/edit)-->|hugo -D|C>create public page]-->|git push|G[(github)]
+B-->|hugo server -D|D[/
+create public page
+and localhost:1313\]-->|git push|G
+ 
 
-{{< tencent "g0014r3khdw" >}}
+subgraph Notion
+    Pr 
+    Pb
+end
 
-## YouTube video
+subgraph Local
+  B
+  C
+  D
+end
 
-{{< youtube "0qwALOOvUik" >}}
+subgraph Data
+  FB
+  YT
+  Ig
+  Web
+end
 
-## Generic video file
+FB-.share.->Pr
+YT-.share.->Pr
+Ig-.share.->Pr
+Web-.share.->Pr
+```
 
-{{< video "https://www.w3schools.com/tags/movie.mp4" >}}
+從 2024/10/25 起開始搬家吧
 
-## Gist
-
-{{< gist CaiJimmy e2751a943de10b2a5b3a8a6c2120cb86 >}}
-
-## GitLab
-
-{{< gitlab 2589724 >}}
-
-## Quote
-
-{{< quote author="A famous person" source="The book they wrote" url="https://en.wikipedia.org/wiki/Book">}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-{{< /quote >}}
-
------
-
-> Photo by [Codioful](https://unsplash.com/@codioful) on [Unsplash](https://unsplash.com/photos/WDSN62Qdxuk)
+[1.Use git page host Hugo blog]
