@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>TEST Category on Hugo Theme Stack Starter</title><link>https://demo.stack.jimmycai.com/categories/test-category/</link><description>Recent content in TEST Category on Hugo Theme Stack Starter</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 25 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/categories/test-category/index.xml" rel="self" type="application/rss+xml"/><item><title>Move the blog from Notion to GitHub</title><link>https://demo.stack.jimmycai.com/p/move-the-blog-from-notion-to-github/</link><pubDate>Fri, 25 Oct 2024 00:00:00 +0000</pubDate><guid>https://demo.stack.jimmycai.com/p/move-the-blog-from-notion-to-github/</guid><description>&lt;img src="https://demo.stack.jimmycai.com/p/move-the-blog-from-notion-to-github/cover.jpg" alt="Featured image of post Move the blog from Notion to GitHub" />&lt;p>當我Notion寫的Blog數量越來越多，然後稀爛的SEO…
+轉而尋找&lt;code>可掛SEO、免費、markdown&lt;/code> 的Blog解決方案&lt;/p>
+&lt;p>&lt;strong>&lt;code>Hugo&lt;/code>+&lt;code>gh-page&lt;/code> 是一個開源，且完全符合，又可以調整style的方案&lt;/strong>&lt;/p>
+&lt;p>未來的編輯流程&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">graph LR
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Pr[(Prive)] -. move .-&amp;gt;Pb[(Publish
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Notion Blog)]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Pb--&amp;gt;|Export
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">markdown|B(Local folder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">copy/paste/edit)--&amp;gt;|hugo -D|C&amp;gt;create public page]--&amp;gt;|git push|G[(github)]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">B--&amp;gt;|hugo server -D|D[/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">create public page
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">and localhost:1313\]--&amp;gt;|git push|G
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">subgraph Notion
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Pr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Pb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">end
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">subgraph Local
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> B
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> C
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> D
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">end
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">subgraph Data
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FB
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> YT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Ig
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Web
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">end
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FB-.share.-&amp;gt;Pr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">YT-.share.-&amp;gt;Pr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Ig-.share.-&amp;gt;Pr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Web-.share.-&amp;gt;Pr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>從 2024/10/25 起開始搬家吧&lt;/p>
+&lt;p>[1.Use git page host Hugo blog]&lt;/p></description></item></channel></rss>
